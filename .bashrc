@@ -68,19 +68,23 @@ function virtualenv_info() {
     [[ -n "$venv_on" ]] && echo "««$venv_on»»"
 }
 
-function parse_git_dirty() {
-    if [[ $(git status --porcelain) ]]; then
+function git_status() {
+    if [[ $(git status --porcelain 2> /dev/null) ]]; then
         echo "✘✘✘✘"
     else
-        echo "✔"
+        echo " ✔"
     fi
+}
+
+function git_branch() {
+    __git_ps1 " (%s)" 2> /dev/null
 }
 
 if [ "$color_prompt" = yes ]; then
     prompt_color='\[\033[;0m\]'
     info_color='\[\033[1;32m\]'
     prompt_symbol=@
-    git_brach_status='$(__git_ps1 " (%s)")\[\033[1;31m\]$(parse_git_dirty)'$prompt_color'  \[\033[1;95m\]$(virtualenv_info)'
+    git_brach_status='$(git_branch)\[\033[1;31m\]$(git_status)'$prompt_color'  \[\033[1;95m\]$(virtualenv_info)'
     if [ "$EUID" -eq 0 ]; then # Change prompt colors for root user
 	prompt_color='\[\033[;94m\]'
 	info_color='\[\033[1;31m\]'
