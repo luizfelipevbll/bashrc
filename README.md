@@ -1,4 +1,4 @@
-# luiz .bashrc theme 
+# luizfelipevbll .bashrc theme 
  
 ### Install
 ```sh
