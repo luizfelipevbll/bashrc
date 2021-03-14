@@ -15,7 +15,7 @@ function box_name {
 }
 
 function return_status() {
-   echo "%(?..👾)"
+   echo "%(?..☠)"
 }
 
 local ruby_env='$(ruby_prompt_info)'
