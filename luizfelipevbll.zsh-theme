@@ -34,10 +34,10 @@ PROMPT="╭──%BΣ%b(%B${main_color}%n${FG[226]}$prompt_symbol${main_color}$(
 ╰─$%{$reset_color%} "
 RPROMPT="$(current_time)$(return_status)"
 
-ZSH_THEME_GIT_PROMPT_PREFIX="─${FG[011]}\u26a1%U"
+ZSH_THEME_GIT_PROMPT_PREFIX="─${FG[226]}♜("
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%u${FG[001]}✘"
-ZSH_THEME_GIT_PROMPT_CLEAN="%u${FG[002]}✔"
+ZSH_THEME_GIT_PROMPT_DIRTY=")♜%u${FG[001]}✘✘✘"
+ZSH_THEME_GIT_PROMPT_CLEAN=")♜%u${FG[002]}✔"
 
 ZSH_THEME_RUBY_PROMPT_PREFIX="  «venv: ${FG[214]}"
 ZSH_THEME_RUBY_PROMPT_SUFFIX="%{$reset_color%}»"
