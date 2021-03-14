@@ -27,7 +27,7 @@ main_color="${FG[002]}"
 prompt_symbol=@
 if [ "$EUID" -eq 0 ]; then # Change prompt colors for root user
 	main_color="${FG[001]}"
-	prompt_symbol=💀
+	prompt_symbol=☠
 fi
 
 PROMPT="╭──%BΣ%b(%B${main_color}%n${FG[226]}$prompt_symbol${main_color}$(box_name)%f%b)─[${FG[239]}%B${FG[004]}%~%b]${git_info}${ruby_env}${virtualenv_info}
