@@ -30,7 +30,7 @@ if [ "$EUID" -eq 0 ]; then # Change prompt colors for root user
 	prompt_symbol=☠
 fi
 
-PROMPT="╭──%BΣ%b(%B${main_color}%n${FG[226]}$prompt_symbol${main_color}$(box_name)%f%b)─[${FG[239]}%B${FG[004]}%~%b]${git_info}${ruby_env}${virtualenv_info}
+PROMPT="╭──%BΣ%b(%B${main_color}%n${FG[226]}$prompt_symbol${main_color}$(box_name)%f%b)─[${FG[239]}%B${FG[014]}%~%b]${git_info}${ruby_env}${virtualenv_info}
 ╰─$%{$reset_color%} "
 RPROMPT="$(current_time)$(return_status)"
 
